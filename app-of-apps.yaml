@@ -119,7 +119,6 @@ spec:
   source:
     repoURL: https://github.com/sarbu89/gitops-learning
     targetRevision: HEAD
-    path: applications
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
