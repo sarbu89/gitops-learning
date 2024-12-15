@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://jaegertracing.github.io/helm-charts
     chart: jaeger
-    targetRevision: 0.77.0
+    targetRevision: 3.3.3
     helm:
       valueFiles:
         - helm-values/jaeger-values.yaml
@@ -31,7 +31,7 @@ spec:
   source:
     repoURL: https://helm.elastic.co
     chart: elasticsearch
-    targetRevision: 8.10.2
+    targetRevision: 8.5.1
     helm:
       valueFiles:
         - helm-values/elasticsearch-values.yaml
@@ -53,7 +53,7 @@ spec:
   source:
     repoURL: https://open-telemetry.github.io/opentelemetry-helm-charts
     chart: opentelemetry-collector
-    targetRevision: 0.85.1
+    targetRevision: 0.110.7
     helm:
       valueFiles:
         - helm-values/otel-collector-values.yaml
@@ -74,8 +74,8 @@ spec:
   project: default
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
-    chart: prometheus
-    targetRevision: 46.1.2
+    chart: kube-prometheus-stack
+    targetRevision: 66.7.1
     helm:
       valueFiles:
         - helm-values/prometheus-values.yaml
@@ -97,7 +97,7 @@ spec:
   source:
     repoURL: https://github.com/grafana/helm-charts
     chart: grafana
-    targetRevision: 6.66.0
+    targetRevision: 8.8.1
     helm:
       valueFiles:
         - helm-values/grafana-values.yaml
