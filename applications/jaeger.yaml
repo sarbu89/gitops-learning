@@ -3,21 +3,15 @@ kind: Application
 metadata:
   name: jaeger
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
     repoURL: https://jaegertracing.github.io/helm-charts
     chart: jaeger
-    targetRevision: 3.3.3
+    targetRevision: 0.77.0
     helm:
-      values: |
-        provisionDataStore:
-          cassandra: false
-        storage:
-          type: memory
-        commonLabels: {}
+      valueFiles:
+        - ../../helm-values/jaeger-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
@@ -25,5 +19,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

@@ -1,0 +1,7 @@
+adminUser: admin
+adminPassword: strongpassword123
+sidecar:
+  dashboards:
+    enabled: true
+  datasources:
+    enabled: true

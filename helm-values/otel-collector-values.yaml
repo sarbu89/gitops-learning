@@ -1,0 +1,16 @@
+config:
+  exporters:
+    jaeger:
+      endpoint: jaeger-collector.monitoring.svc.cluster.local:14250
+    prometheus:
+      endpoint: 0.0.0.0:8888
+  service:
+    pipelines:
+      traces:
+        receivers: [otlp]
+        processors: [batch]
+        exporters: [jaeger]
+      metrics:
+        receivers: [prometheus]
+        processors: [batch]
+        exporters: [prometheus]

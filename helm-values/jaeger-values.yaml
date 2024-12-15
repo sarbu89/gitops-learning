@@ -1,0 +1,9 @@
+storage:
+  type: elasticsearch
+  elasticsearch:
+    host: elasticsearch.monitoring.svc.cluster.local
+    port: 9200
+  options:
+    es:
+      username: elastic
+      password: changeme
