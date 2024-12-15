@@ -8,8 +8,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://grafana.github.io/helm-charts 
-    chart: grafana 
+    repoURL: https://grafana.github.io/helm-charts
+    chart: grafana
     targetRevision: 8.8.1
     helm:
       values: |
@@ -31,6 +31,7 @@ spec:
               type: jaeger
               url: http://jaeger-query.monitoring.svc.cluster.local
               access: proxy
+        commonLabels: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring

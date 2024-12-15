@@ -16,7 +16,8 @@ spec:
         server:
           persistentVolume:
             enabled: true
-            size: 50Gi
+            size: 10Gi
+        commonLabels: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring

@@ -37,6 +37,7 @@ spec:
               metrics:
                 receivers: [otlp]
                 exporters: [prometheus, logging]
+        commonLabels: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
