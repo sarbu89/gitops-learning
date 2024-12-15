@@ -8,8 +8,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/sarbu89/gitops-learning
-    path: apps
+    repoURL: https://github.com/sarbu89/gitops-learning.git
+    path: apps/*  # Correct path
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
